@@ -14,8 +14,12 @@ Over the past two decades, a wealth of information has been compiled. These repo
 
 **Outcome:** To write an algorithm that detects all relevant information in the publication database, and gives a complete and comprehensible overview of relevant paragraphs, graphics and other subject matter in the search results. This display of information will contribute to a better understanding of both phenomena and the ongoing developments, a greater awareness of the policies and recommendations, and perhaps even lead to new insights.  
 
-**Datasets:** The National Rapporteur’s  publication database. Please note that all these documents are in Dutch.
+## Datasets 
+(Please note most of these documents are in Dutch.)
 
+[The National Rapporteur’s  publication database:](https://www.nationaalrapporteur.nl/)
+
+[All the publications of the database](https://ahmed7.stackstorage.com/s/zF0Fcl99VGV9uuK)
 
 
 ## Deep Learning Resources
