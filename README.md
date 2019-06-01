@@ -1,6 +1,8 @@
 # The National Rapporteur Challenge
 2nd edition of the Hackathon for Peace, Justice and Security
 
+https://www.hackathonforgood.org
+
 ## TEXT MINING AND RELATIONSHIP EXTRACTION TO INFORM POLICY RECOMMENDATIONS AND INCREASE IMPACT
 The Dutch National Rapporteur on Trafficking in Human Beings and Sexual Violence against Children reports independently on the nature and extent of human trafficking and sexual violence against children in the Netherlands, and on the effects of the government policies put in place. The National Rapporteur raises public awareness for these phenomena, and makes policy recommendations aimed at preventing and combating human trafficking and sexual violence against children. 
 
