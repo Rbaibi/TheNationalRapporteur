@@ -16,7 +16,7 @@ Over the past two decades, a wealth of information has been compiled. These repo
 ## Datasets 
 (Please note most of these documents are in Dutch.)
 
-[The National Rapporteur’s  publication database:](https://www.nationaalrapporteur.nl/)
+[The National Rapporteur’s  publication database](https://www.nationaalrapporteur.nl)
 
 [All the publications of the database](https://ahmed7.stackstorage.com/s/zF0Fcl99VGV9uuK)
 
