@@ -1,0 +1,58 @@
+body{
+    font:12px/1.5 Tahoma, Helvetica, Arial, sans-serif;text-align:center;
+    margin: 0px;
+    background-color:#f9f9f9;
+}
+a:link, a:visited{
+    text-decoration:none; color:#6599CB;
+}            
+#header {
+    text-align: center;
+    padding: 70px 0px 40px 0px;
+}
+#header a img{
+    border-style: none;
+    margin: 0px;
+}
+#types{padding:15px;}
+#types span{margin-left:25px; }
+#word {
+text-align: center;
+font: 15pt/17pt bold "Helvetica" normal;
+padding: 5px 10px 5px 10px;
+width: 40%;
+border: 3px solid green ;
+}
+#google{
+    color:#fff;
+    background:green;
+    font-size:15px;
+    text-decoration: none;
+    font-weight:bold;
+    margin: 10px 5px 10px 5px;
+    padding:5px 10px 5px 10px;
+    line-height: 15px;
+}            
+ 
+#wrapper{
+    text-align:center;
+}
+#footer {
+    text-align: center;
+    margin: 50px 0px 0px 0px;
+    border-top:1px solid #E4E4E4;
+    color:#808080;
+    float:left;                
+    width:600px;
+    position: relative;
+    left:50%;
+    margin-left: -300px;
+}
+#footer div {margin-top:5px;}
+#footer #about, #footer #contact, #footer #thanks {
+  display: none;
+  text-align:left;
+  margin: 10px;
+  padding: 10px;
+  background-color: #FFFF99;
+}

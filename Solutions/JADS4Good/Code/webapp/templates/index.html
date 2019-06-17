@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Publicatie Search &mdash; JADS4Good</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500"> 
+  <link rel="stylesheet" href="../static/fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/magnific-popup.css">
+  <link rel="stylesheet" href="../static/css/jquery-ui.css">
+  <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../static/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../static/css/mediaelementplayer.css">
+  <link rel="stylesheet" href="../static/css/animate.css">
+  <link rel="stylesheet" href="../static/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="../static/css/fl-bigmug-line.css">
+
+  
+  <link rel="stylesheet" href="../static/css/aos.css">
+
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <div class="site-loader"></div>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+    <div class="site-navbar">
+      <div class="container py-0">
+        <div class="row align-items-center">
+          <div class="col-8 col-md-8 col-lg-4">
+            <h1 class=""><a href="/" class="h5 text-uppercase text-black"><img src="../static/logo.gif"/></a></h1>
+          </div>
+          <div class="col-4 col-md-4 col-lg-8">
+            <nav class="site-navigation text-right text-md-right" role="navigation">
+
+              <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-0"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="active">
+                  <a href="/">Publicatie Search</a>
+                </li>
+                <li><a href="/upload">Upload</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-0">
+    <div class="container">
+      <form class="row mb-5" action="/" method="POST">
+        <br/>
+        <h2>Publicaties</h2>
+
+        <h5>Op deze pagina vindt u de rapportages die de Nationaal Rapporteur periodiek uitbrengt over de aard en omvang van mensenhandel en seksueel geweld tegen kinderen in Nederland. <br/><br/>
+          De Nationaal Rapporteur publiceert ook regelmatig artikelen. Ook toespraken en brieven van de Nationaal Rapporteur aan bewindspersonen en de Tweede Kamer kunt u op deze pagina terugvinden en downloaden.<br/><br/>
+        </h5>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="select-wrap">
+            <span class="icon icon-arrow_drop_down"></span>
+            <select name="type_doc" id="type_doc" class="form-control d-block rounded-0">
+              <option name="type" value="All">All</option>
+              <option name="type" value="Brief">Brief</option>
+              <option name="type" value="Jaarplan">Jaarplan</option>
+              <option name="type" value="Publicatie">Publicatie</option>
+              <option name="type" value="Rapport">Rapport</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="mb-4">
+            <p>Periode</p>
+            <div id="slider-range" name="slider-range" class="border-primary"></div>
+            <input type="text" name="amount" id="amount" class="form-control border-0 pl-0 bg-white"/>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="mb-4">
+            <div class="border-primary"></div>
+            <input type="text" name="zoekterm" id="zoekterm" class="form-control" placeholder="Zoekterm">
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+          <input type="submit" class="btn btn-primary btn-block form-control-same-height rounded-0" value="Search">
+          <br/>
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-10 mb-10">
+          <h4>{{number_documents}} search results found.</h4>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 mb-2">
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="site-section site-section-sm bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-11">
+          <div class="row">
+            {%for i in range(0, doc_display)%} 
+            <div class="col-md-6 col-lg-6 mb-6" data-aos="fade-up" data-aos-delay="200">
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="../static/word_cloud/{{result_set[i][7]}}.png" alt="First slide">
+                  </div>
+                </div>
+                <br/><br/>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="200">
+              <span class="d-block text-secondary small text-uppercase">{{result_set[i][4]}} | {{result_set[i][1]}} | {{result_set[i][2]}}</span>
+              <h2 class="h5 text-black mb-3">{{result_set[i][0]}}</h2> 
+              <p>From publication : {{result_set[i][3]}}</p>
+              <!-- Button to Open the Modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{result_set[i][7]}}">
+                Read More
+              </button> 
+            </div>
+            {%endfor%} 
+          </div>
+        </div>
+
+        <div class="col-md-1">
+          {%for k in range(0, len_emp)%} 
+          <div class="row">
+            <div class="team-member text-center">
+              <img src="../static/photos/{{result_emp[k][1]}}.jpg" alt="Image" class="img-fluid mb-4 w-50 mx-auto" height="50" width="10">
+              <div class="text p-3">
+                <h2 class="mb-2 font-weight-light text-black h4">{{result_emp[k][1]}}</h2>
+                <span class="d-block mb-3 text-white-opacity-05">{{result_emp[k][4]}}</span>
+                <p class="mb-5">&ldquo; {{ result_emp[k][2] | split_space }} &rdquo;</p>
+                
+              </div>
+            </div>
+          </div>
+          {%endfor%} 
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;</script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="../static/js/jquery-ui.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/owl.carousel.min.js"></script>
+<script src="../static/js/mediaelement-and-player.min.js"></script>
+<script src="../static/js/jquery.stellar.min.js"></script>
+<script src="../static/js/jquery.countdown.min.js"></script>
+<script src="../static/js/jquery.magnific-popup.min.js"></script>
+<script src="../static/js/bootstrap-datepicker.min.js"></script>
+<script src="../static/js/aos.js"></script>
+<script src="../static/js/main.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+  $( function() {
+    var availableTags = [
+    "Mensenhandel",
+    "Waarde",
+    "mensenhandel",
+    "prostitutie",
+    "loverboy",
+    "slachtoffermonitor",
+    "jurisprudentie",
+    "arbeidsuitbuiting",
+    "dadermonitor",
+    "gewogen",
+    "op goede grond",
+    "cijfers",
+    "monitor",
+    "rapportage",
+    "negende",
+    "seksueel geweld",
+    "stage",
+    "vacature",
+    "Vacatures",
+    "achtervolgen",
+    "effectief preventief",
+    "prostitutie en mensenhandel",
+    "rapportage mensenhandel"
+    ];
+
+    $( "#zoekterm" ).autocomplete({
+      source: availableTags
+    });
+  } );
+</script>
+
+{%for i in range(0, doc_display)%} 
+<!-- The Modal -->
+<div class="modal" id="{{result_set[i][7]}}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title">{{result_set[i][3]}}</h5>
+
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <div id="carouselExampleControls{{i}}" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="../static/pdf_images/{{i}}-000.png" alt="First Image">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="../static/pdf_images/{{i}}-001.png" alt="Second Image">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="../static/pdf_images/{{i}}-002.png" alt="Second Image">
+            </div>
+          </div>
+          <br/><br/>
+          <a class="carousel-control-prev" href="#carouselExampleControls{{i}}" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls{{i}}" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+        <p>{{result_set[i][4]}}</p>
+        <p>{{result_set[i][0]}}</p>
+        <p>{{result_set[i][6]}}</p>
+      </div>
+        <form>
+
+        </form>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <form id="form-id" action="/pdf" method="POST">
+            <input type="hidden" name="test" id="test" value="{{result_set[i][7]}}"/>
+            <input type="hidden" name="word_vec" id="word_vec" value="{{word_vectors}}"/>
+             <input type="submit" class="btn btn-primary btn-block form-control-same-height rounded-0" value="Read PDF">
+          </form>
+        </div>
+
+    </div>
+  </div>
+</div>
+{%endfor%} 
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* Style search query return content */
+
+.accordion-toggle {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.keyword-occurence {
+    cursor: pointer;
+    font-size: 12px;
+}
+
+p.pubsummary {
+    font-size: 14px;
+}
+
+.doctype-date {
+    font-size: 10px;
+}
+
+.fa {
+    font-size: 14px;
+    transition: transform .2s;
+  }

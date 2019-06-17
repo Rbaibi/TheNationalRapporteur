@@ -1,0 +1,44 @@
+{
+  "name": "matrix",
+  "version": "0.0.1",
+  "description": "Team CGOA - Hack for good 2019 - Main project",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r esm src/app.js"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "pdf-parse": "^1.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgoa/matrix.git"
+  },
+  "keywords": [
+    "CGOA",
+    "Hack",
+    "for",
+    "good",
+    "National",
+    "Rapporteur",
+    "on",
+    "Trafficking",
+    "in",
+    "Human",
+    "Beings",
+    "and",
+    "Sexual",
+    "Violence",
+    "against",
+    "Children"
+  ],
+  "author": "Team CGOA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cgoa/matrix/issues"
+  },
+  "homepage": "https://github.com/cgoa/matrix#readme"
+}
